@@ -62,9 +62,11 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
 .showGreyMode {
+  // 展示灰色模式
   filter: grayscale(1);
 }
 
+// 颜色反转
 .showColorWeakness {
   filter: invert(0.8);
 }

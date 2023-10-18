@@ -73,6 +73,7 @@ export function useWatermark(parentEl: Ref<HTMLElement | null> = bodyEl) {
     const watermarkElPosition = isBody ? "fixed" : "absolute"
     const parentElPosition = isBody ? "" : "relative"
     watermarkEl = document.createElement("div")
+    // 设置水印的思路，新建一个元素，将该元素的背景设置成水印图片，然后将水印固定定位覆盖整个屏幕（这时，应用不能点击，因为被水印遮住了，所以需要设置pointer-events禁用鼠标事件）
     watermarkEl.style.pointerEvents = "none"
     watermarkEl.style.top = "0"
     watermarkEl.style.left = "0"
