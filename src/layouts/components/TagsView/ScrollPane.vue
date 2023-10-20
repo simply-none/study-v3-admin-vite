@@ -25,7 +25,7 @@ const scrollbarContentRef = ref<HTMLDivElement>()
 /** 当前滚动条距离左边的距离 */
 let currentScrollLeft = 0
 /** 每次滚动距离 */
-const translateDistance = 200
+const translateDistance = 20
 
 /** 滚动时触发 */
 const scroll = ({ scrollLeft }: { scrollLeft: number }) => {

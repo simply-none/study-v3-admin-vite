@@ -60,9 +60,12 @@ const filterAffixTags = (routes: RouteRecordRaw[], basePath = "/") => {
   return tags
 }
 
-/** 初始化标签页 */
+/** 初始化标签页：将固定页的tab展示出来 */
 const initTags = () => {
+  // 注：初始化标签页，这里是直接展示路由中所有包含affix的标签页，然后将其直接展示到tab中，不管是否访问过，由于只有首页具备，也是符合需求的，
+  // 后续如果要根据只有访问过的才能展示，则还得改改
   affixTags = filterAffixTags(permissionStore.routes)
+  // debugger
   for (const tag of affixTags) {
     // 必须含有 name 属性
     tag.name && tagsViewStore.addVisitedView(tag)
